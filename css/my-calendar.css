@@ -1,0 +1,87 @@
+.myCalendar-checkbox{
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+  font: var(--body1-regular);
+  color: var(--gray30);
+  padding-bottom: .75rem;
+}
+
+.myCalendar-checkbox p{
+  margin: 0;
+}
+
+.myCalendar input{
+  display: none;
+}
+
+.myCalendar span{
+  display: inline-block;
+  position: relative;
+  block-size: 1.5em;
+  inline-size: 1.5em;
+  border: 2px solid var(--gray50);
+  border-radius: .2rem;
+
+}
+
+.myCalendar label{
+  cursor: pointer;
+}
+
+details > summary {
+    list-style-type: none;
+    cursor: pointer;
+    display: flex;
+    gap: 5rem;
+    font: var(--body1-medium);
+}
+
+details summary i{
+  font-size: 1rem;
+}
+
+.myCalendar details .myCalendar-checkbox:first-of-type{
+  padding-block-start: 1rem;
+}
+
+
+label input:checked~ span:after{
+  opacity: 1;
+}
+
+.myCalendar label input ~ span:before {
+  background-color: white;
+  content: "";
+  display: block;
+  height: 18px;
+  position: absolute;
+  width:  10px;
+  opacity: 0;
+}
+
+.myCalendar label input:checked~ span:before {
+  opacity: 1;
+}
+.myCalendar span::before {
+  top: -7px;
+  right: -4px;
+
+}
+
+
+.myCalendar span::after{
+  content: "";
+  position: absolute;
+  border: solid var(--gray50);
+  border-width: 0 0.15em 0.15em 0;
+  transform:  rotate(45deg);
+  block-size: 1.3em;
+  inline-size: 0.4em;
+  margin-inline-start: .8em;
+  margin-block-start:-.4em;
+  opacity: 0;
+
+}
+
+
